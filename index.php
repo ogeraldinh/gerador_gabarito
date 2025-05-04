@@ -49,25 +49,26 @@
     <section class="main-section-2">
       <div class="">
         <p class="">
-          Provas de múltipla escolha:
+          <strong>Provas de múltipla escolha:</strong>
           Geram perguntas com várias alternativas, sendo que apenas uma delas é correta.
         </p>
       </div>
       <div class="">
         <p class="">
-          Correção Automatizada:
+          <strong>Correção Automatizada:</strong>
           Os sistemas de geradores de provas tem funcionalidades de correção automática.
         </p>
       </div>
       <div class="">
         <p class="">
-          Disponibilidade Online:
+          <img src="assets/img/dude.png"alt="">
+          <strong>Disponibilidade Online:</strong>
           Os geradores de provas estão disponíveis online, permitindo fácil acesso a educadores e alunos.
-
+        </p>
       </div>
       <div class="">
         <p class="">
-          Criação Rápida:
+          <strong>Criação Rápida:</strong>
           O gerador de provas economiza o tempo que o professor gastaria criando questões manualmente.
         </p>
       </div>
