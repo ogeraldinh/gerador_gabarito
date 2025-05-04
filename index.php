@@ -1,3 +1,8 @@
+<?php
+  require_once('conex.php');
+  include('function_login.php');
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -91,10 +96,10 @@
         <button><a href="cadastro.php">COMECE JÁ<img src="assets/img/seta.png" alt=""></a></button>
       </div>
       <div class="cta-section-2">
-        <form action="">
+        <form action="" method="post">
           <img src="assets/img/v-logo.png" alt="">
-          <input type="email" placeholder="Email">
-          <input type="password" placeholder="Senha">
+          <input type="text" id="email" name="email"placeholder="Email">
+          <input type="password" id="password" name="password" placeholder="Senha">
           <button>Entrar</button>
           <div>
             <a href="cadastro.php">Cadastre-se</a>

@@ -1,16 +1,39 @@
 <?php
 require_once('../conex.php');
 include('../protect.php');
-include("../pesquisar_dis_ou_prof.php");
 // Inicia sessão se não estiver iniciada
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-require_once('verificar_admin.php'); // Inclua a função de verificação
-
-// Chama a função para verificar se o usuário é um administrador
+require_once('verificar_admin.php'); // Verifica se o usuário é administrador
 verificarAdmin();
 
+$conn = getConexao();
+
+// Captura termo de busca
+$busca = $_POST['busca'] ?? '';
+
+// Monta SQL com LEFT JOIN para incluir professores sem disciplina
+$sql = "
+  SELECT 
+    p.id, 
+    p.nome, 
+    p.email, 
+    d.nome AS disciplinas_nome
+  FROM professores p
+  LEFT JOIN disciplinas d ON p.disciplina_id = d.id
+";
+if (!empty($busca)) {
+    $sql .= " WHERE p.nome LIKE :busca OR d.nome LIKE :busca";
+}
+
+$stmt = $conn->prepare($sql);
+if (!empty($busca)) {
+    $param = "%{$busca}%";
+    $stmt->bindParam(':busca', $param);
+}
+$stmt->execute();
+$result = $stmt;
 ?>
 
 <!DOCTYPE html>
@@ -39,13 +62,12 @@ verificarAdmin();
         </form>
         
         <div class="table-responsive">
-            <table class="tabela-dados">
+            <table class="tabela-dados"border='1'>
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Nome</th>
                         <th>Email</th>
-                        <th>Tipo</th>
+                   
                         <th>Disciplina</th>
                         <th>Ações</th>
                     </tr>
@@ -54,10 +76,9 @@ verificarAdmin();
                     <?php if ($result->rowCount() > 0): ?>
                         <?php while ($user_data = $result->fetch(PDO::FETCH_ASSOC)): ?>
                             <tr>
-                                <td><?= htmlspecialchars($user_data['id']) ?></td>
+                                <input type="hidden" name="id"<?= htmlspecialchars($user_data['id']) ?>>
                                 <td><?= htmlspecialchars($user_data['nome']) ?></td>
                                 <td><?= htmlspecialchars($user_data['email']) ?></td>
-                                <td><?= htmlspecialchars($user_data['tipos_usuario']) ?></td>
                                 <td><?= htmlspecialchars($user_data['disciplinas_nome']) ?></td>
                                 <td class="acoes">
                                     <a href="atualizar_prof.php?id=<?= $user_data['id'] ?>" class="btn-editar">Editar</a>

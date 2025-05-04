@@ -47,7 +47,7 @@ function cadastrarProfessor($nome, $email, $password, $disciplina) {
         $senha_hash = password_hash($password, PASSWORD_DEFAULT);
         
         // Inserir no banco
-        $stmt_insert = $conn->prepare('INSERT INTO professores (nome, senha, email, tipo_id, disciplinas_id) VALUES (?, ?, ?, ?, ?)');
+        $stmt_insert = $conn->prepare('INSERT INTO professores (nome, senha, email, tipo_id, disciplina_id) VALUES (?, ?, ?, ?, ?)');
         $stmt_insert->bindParam(1, $nome, PDO::PARAM_STR);
         $stmt_insert->bindParam(2, $senha_hash, PDO::PARAM_STR);
         $stmt_insert->bindParam(3, $email, PDO::PARAM_STR);
