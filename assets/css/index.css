@@ -179,3 +179,7 @@
 .cta-section form div a:hover {
     color: #2177a9;
 }
+
+#senha-incorreta {
+    color: red;
+}

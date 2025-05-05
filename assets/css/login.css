@@ -100,3 +100,7 @@
     cursor: pointer;
     background-image: linear-gradient(var(--gradient));
 }
+
+#senha-incorreta {
+    color: red;
+}

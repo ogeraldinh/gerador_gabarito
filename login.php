@@ -46,7 +46,7 @@
 
                 <button type="submit">Entrar</button>
 
-                <?php echo "<p>" . htmlspecialchars($message) . "</p>"?>
+                <?php echo "<p id='senha-incorreta'>" . htmlspecialchars($message) . "</p>"?>
             </form>
         </section>
     </main>
