@@ -93,7 +93,7 @@
         <div class="section-title">
           <h2>REALIZE SUAS CONQUISTAS</h2>
         </div>
-        <button><a href="cadastro.php">COMECE JÁ<img src="assets/img/seta.png" alt=""></a></button>
+        <button><a href="cadastro_user.php">COMECE JÁ<img src="assets/img/seta.png" alt=""></a></button>
       </div>
       <div class="cta-section-2">
         <form action="" method="post">
@@ -101,8 +101,10 @@
           <input type="text" id="email" name="email"placeholder="Email">
           <input type="password" id="password" name="password" placeholder="Senha">
           <button>Entrar</button>
+
           <div>
-            <a href="cadastro.php">Cadastre-se</a>
+            <a href="esqueci_minha_senha.php">Esqueci minha senha</a>
+            <a href="cadastro_user.php">Cadastre-se</a>
           </div>
         </form>
       </div>
