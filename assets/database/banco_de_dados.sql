@@ -21,7 +21,7 @@ CREATE TABLE professores (
     email VARCHAR(100) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL,
     tipo_id INT NOT NULL,
-    disciplinas_id INT NOT NULL,
+    disciplina_id INT NOT NULL,
     FOREIGN KEY (tipo_id) REFERENCES tipos_usuario(id),
     FOREIGN KEY (disciplina_id) REFERENCES disciplinas(id)
 );
