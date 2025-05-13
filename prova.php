@@ -25,11 +25,11 @@ include('protect.php');
 <body>
     <nav class="navbar"></nav>
     <main class="main-content">
-      <section class="main-exp">
-        <div class="title">
+      <section class="main-section-1">
+        <div class="section-title">
           <h1>Como gerar sua prova?</h1>
         </div>
-        <p class="main-exp">
+        <p class="">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi rem hic
           eligendi id. Perspiciatis, voluptates amet! Perspiciatis, saepe
           provident officiis placeat alias cupiditate delectus facilis eius.
