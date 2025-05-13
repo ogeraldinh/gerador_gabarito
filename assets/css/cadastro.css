@@ -104,3 +104,24 @@
 .main-section-2 form div a:hover {
     color: #2177a9;
 }
+
+.navigation-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 40px 0;
+}
+
+.navigation-options a{
+    border-radius: 25px;
+    padding: 10px;
+    background-color: #0A4769;
+    color: #fff;
+    margin: 0 30px;
+    text-decoration: none;
+}
+
+.navigation-options a:hover {
+    background-color: #0c6493;
+}

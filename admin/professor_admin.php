@@ -47,7 +47,7 @@ $result = $stmt;
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="../assets/css/navbar.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
-    <link rel="stylesheet" href="../assets/css/tabela.css" />
+    <link rel="stylesheet" href="../assets/css/professor.css" />
     <title>Professores</title>
 </head>
 <body>
@@ -56,13 +56,13 @@ $result = $stmt;
     <main class="container">
         <h1>Lista de Professores</h1>
         
-        <form method="POST" class="search-form">
+        <form method="POST" class="search-bar">
             <input type="text" name="busca" placeholder="Pesquisar por nome ou disciplina" value="<?= htmlspecialchars($busca) ?>">
             <button type="submit" class="btn-buscar">Buscar</button>
         </form>
         
         <div class="table-responsive">
-            <table class="tabela-dados"border='1'>
+            <table class="tabela-dados">
                 <thead>
                     <tr>
                         <th>Nome</th>
@@ -80,7 +80,7 @@ $result = $stmt;
                                 <td><?= htmlspecialchars($user_data['nome']) ?></td>
                                 <td><?= htmlspecialchars($user_data['email']) ?></td>
                                 <td><?= htmlspecialchars($user_data['disciplinas_nome']) ?></td>
-                                <td class="acoes">
+                                <td class="tabela-acoes">
                                     <a href="atualizar_prof.php?id=<?= $user_data['id'] ?>" class="btn-editar">Editar</a>
                                     <a href="excluir_professor.php?id=<?= $user_data['id'] ?>" class="btn-excluir" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
                                 </td>
@@ -94,10 +94,10 @@ $result = $stmt;
                 </tbody>
             </table>
         </div>
-        <div>
+        <div class="navigation-options">
+            <a href="admin.php">voltar</a>
             <a href="cadastro_professor.php" class="btn-cadastro">Cadastrar professor</a>
         </div>
-        <a href="admin.php">voltar</a>
     </main>
 
     <footer class="footer"></footer>

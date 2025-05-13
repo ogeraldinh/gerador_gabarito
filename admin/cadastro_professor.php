@@ -22,10 +22,10 @@
     />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/cadastro.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/cadastro.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
     
     <title>Página de Cadastro</title>
   </head>
@@ -38,7 +38,7 @@
           <h1>Cadastro</h1>
         </div>
 
-        <p>Infome seus dados para realizar o cadastro no sistema.</p>
+        <p>Infome os dados para realizar o cadastro no sistema.</p>
       </section>
       <section class="main-section-2">
         <?php if (!empty($message)): ?>
@@ -66,9 +66,11 @@
           <button type="submit">Cadastrar</button>
         </form>
       </section>
-      <a href="professor_admin.php"><button>Voltar</button></a>
-
     </main>
+
+      <div class="navigation-options">
+        <a href="professor_admin.php">Voltar</a>
+      </div>
 
     
 

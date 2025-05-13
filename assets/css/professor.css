@@ -90,6 +90,23 @@
     border: none;
 }
 
+.tabela-acoes a{
+    border-radius: 10px;
+    padding: 0 10px;
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+
+}
+
+.tabela-acoes .btn-editar {
+    background-color: #b3b3b3;
+}
+
+.tabela-acoes .btn-excluir {
+    background-color: #03293e;
+}
+
 .tabela-dados {
     border-collapse: collapse;
 }
@@ -105,4 +122,23 @@
     text-align: left;
 }
 
+.navigation-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 40px 0;
+}
 
+.navigation-options a{
+    border-radius: 25px;
+    padding: 10px;
+    background-color: #0A4769;
+    color: #fff;
+    margin: 0 30px;
+    text-decoration: none;
+}
+
+.navigation-options a:hover {
+    background-color: #0c6493;
+}
