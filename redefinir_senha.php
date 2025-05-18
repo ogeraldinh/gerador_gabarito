@@ -54,6 +54,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nova_senha']) && isse
 
 
 
+<?php
+  require_once('conex.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -70,16 +74,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nova_senha']) && isse
 
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/login.css">
-  <title>Redefinir Senha</title>
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <title>Esqueci minha senha</title>
 </head>
   <body>
+    <nav class="navbar"></nav>
+
     <main class="main-content">
-        
-        <section class="main-section-1">
+         <section class="main-section-1">
           <div class="section-title">
-            <h1>Redefinir Senha</h1>
+            <h1>Lembou a senha?</h1>
           </div>
-           
+            <button id="btn-title"><a href="login.php">Voltar à página de login<img src="assets/img/seta.png" alt=""></a></button>
+        </section>
         <section class="main-section-2">
              <?php if ($erro): ?>
                 <p class="erro"><?= htmlspecialchars($erro) ?></p>
@@ -98,6 +106,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nova_senha']) && isse
             </form>
         </section>
     </main>
+
+    
+    <footer class="footer"></footer>
+
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
+    
 
 </body>
 </html>

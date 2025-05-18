@@ -26,7 +26,12 @@
     <nav class="navbar"></nav>
 
     <main class="main-content">
-        
+        <section class="main-section-1">
+          <div class="section-title">
+            <h1>Lembou a senha?</h1>
+          </div>
+            <button id="btn-title"><a href="login.php">Voltar à página de login<img src="assets/img/seta.png" alt=""></a></button>
+        </section>
         <section class="main-section-2">
             <form action="recuperar_senha.php" method="POST" class="form-login">
                 <img src="assets/img/v-logo.png" alt="">
@@ -35,9 +40,7 @@
                 placeholder="Email">
                
                 <button type="submit">Recuperar Senha</button>
-                <div>
-                    <a href="index.php">Voltar</a>
-                </div>
+                
                 <!-- <?php echo "<p id='senha-incorreta'>" . htmlspecialchars($message) . "</p>"?> -->
             </form>
         </section>

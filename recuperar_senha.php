@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $token = bin2hex(random_bytes(16));
             $expira_em = date('Y-m-d H:i:s', strtotime('+1 hour'));
 
-            // Certifique-se de que essa tabela existe e tem a coluna tipo se necessário
+            // Enviar e-mail com o link de redefinição de senha
             $stmt = $conn->prepare("
                 INSERT INTO reset_senha (usuario_id, token, expira_em)
                 VALUES (:usuario_id, :token, :expira_em)
