@@ -72,6 +72,16 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.form-login a {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.form-login a:hover {
+    color: #2177a9;
+}
+
 .main-section-2 form input {
     font-size: 1.25em;
     margin-top: 30px;

@@ -13,18 +13,28 @@ $conn = getConexao();
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/flat-navbar.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/tabela-1.css" />
     <title>Consulta de Provas</title>
 </head>
 <body>
-    <h1>Consultar Provas</h1>
+    <nav class="navbar"></nav>
+    <main class="main-content">
+        <section class="main-section-1">
+                <h1>Consultar Provas</h1>
+        </section>
+    </main>
 
-    <form method="POST" action="consultar_provas.php">
+
+    <form method="POST" action="consultar_provas.php" class="tabela">
         <button type="submit" name="buscar_provas">Buscar Provas</button>
     </form>
-
-    <a href="questoes_prof.php">Cadastrar nova prova</a><br>
-    <a href="professor.php">Voltar</a>
 
 <?php
 if (isset($_POST['buscar_provas'])) {
@@ -56,5 +66,10 @@ if (isset($_POST['buscar_provas'])) {
     }
 }
 ?>
+    <div class="navigation-options">
+        <a href="professor.php">Voltar</a>
+        <a href="cadastro_questoes.php">Cadastrar Questão</a>
+    </div>
+    <script src="../assets/js/prof-navbar.js"></script>
 </body>
 </html>

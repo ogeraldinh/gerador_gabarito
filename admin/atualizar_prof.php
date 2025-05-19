@@ -72,7 +72,7 @@ $conn = null;
 
             <section class="main-section-2">
                 <form action="upd_prof.php" method="POST">
-                    <img src="../assets/img/logo.png" alt="">
+                    <img src="../assets/img/v-logo.png" alt="">
                     <input type="hidden" name="id" value="<?php echo htmlspecialchars($professor['id']); ?>">
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" id="nome" value="<?php echo htmlspecialchars($professor['nome']); ?>" required>

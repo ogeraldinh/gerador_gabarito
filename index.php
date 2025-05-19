@@ -1,6 +1,6 @@
 <?php
-  require_once('conex.php');
-  include('function_login.php');
+require_once('conex.php');
+include('function_login.php');
 
 ?>
 <!DOCTYPE html>
@@ -38,16 +38,24 @@
 
       <p class="">
         Bem-vindo ao Gerador de Provas!
-        Nossa plataforma foi criada para facilitar a vida de professores, coordenadores e educadores em geral. Aqui, você pode montar provas personalizadas em poucos minutos, escolhendo questões de um banco organizado por matérias e assuntos. Depois, basta gerar o arquivo em PDF, pronto para ser impresso ou distribuído digitalmente.
+        Nossa plataforma foi criada para facilitar a vida de professores, coordenadores e educadores em geral. Aqui,
+        você pode montar provas personalizadas em poucos minutos, escolhendo questões de um banco organizado por
+        matérias e assuntos. Depois, basta gerar o arquivo em PDF, pronto para ser impresso ou distribuído digitalmente.
       </p>
       <p class="">
-        Um gerador de provas é uma ferramenta, geralmente de software, usada para criar questões de provas ou exames. Esses geradores podem produzir diferentes tipos de questões, como múltipla escolha, dissertativas, verdadeiro ou falso, entre outras.
+        Um gerador de provas é uma ferramenta, geralmente de software, usada para criar questões de provas ou exames.
+        Esses geradores podem produzir diferentes tipos de questões, como múltipla escolha, dissertativas, verdadeiro ou
+        falso, entre outras.
       </p>
       <p class="">
-        Eles podem ser configurados para gerar provas com base em conteúdos específicos, ajustando o nível de dificuldade e a quantidade de questões, conforme as necessidades do usuário (como professores, escolas ou instituições de ensino).
+        Eles podem ser configurados para gerar provas com base em conteúdos específicos, ajustando o nível de
+        dificuldade e a quantidade de questões, conforme as necessidades do usuário (como professores, escolas ou
+        instituições de ensino).
       </p>
       <p class="">
-        Sabemos o quanto o processo de elaborar avaliações pode ser demorado. Pensando nisso, desenvolvemos uma ferramenta intuitiva, com recursos que otimizam o tempo e aumentam a qualidade das provas. Escolha questões manualmente ou deixe o sistema montar uma prova aleatória para você — o controle está em suas mãos.
+        Sabemos o quanto o processo de elaborar avaliações pode ser demorado. Pensando nisso, desenvolvemos uma
+        ferramenta intuitiva, com recursos que otimizam o tempo e aumentam a qualidade das provas. Escolha questões
+        manualmente ou deixe o sistema montar uma prova aleatória para você — o controle está em suas mãos.
       </p>
     </section>
 
@@ -66,7 +74,7 @@
       </div>
       <div class="">
         <p class="">
-          <img src="assets/img/dude.png"alt="">
+          <img src="assets/img/dude.png" alt="">
           <strong>Disponibilidade Online:</strong>
           Os geradores de provas estão disponíveis online, permitindo fácil acesso a educadores e alunos.
         </p>
@@ -98,7 +106,7 @@
       <div class="cta-section-2">
         <form action="" method="post">
           <img src="assets/img/v-logo.png" alt="">
-          <input type="text" id="email" name="email"placeholder="Email">
+          <input type="text" id="email" name="email" placeholder="Email">
           <input type="password" id="password" name="password" placeholder="Senha">
           <button>Entrar</button>
 

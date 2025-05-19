@@ -45,16 +45,17 @@ $result = $stmt;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/flat-navbar.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
-    <link rel="stylesheet" href="../assets/css/professor.css" />
+    <link rel="stylesheet" href="../assets/css/tabela-1.css" />
     <title>Professores</title>
 </head>
 <body>
     <nav class="navbar"></nav>
-    
-    <main class="container">
-        <h1>Lista de Professores</h1>
+    <main class="main-content">
+        <div class="section-title">
+            <h1>Lista de Professores</h1>
+        </div>
         
         <form method="POST" class="search-bar">
             <input type="text" name="busca" placeholder="Pesquisar por nome ou disciplina" value="<?= htmlspecialchars($busca) ?>">
@@ -102,7 +103,7 @@ $result = $stmt;
 
     <footer class="footer"></footer>
 
-    <script src="assets/js/navbar.js"></script>
-    <script src="assets/js/footer.js"></script>
+    <script src="../assets/js/admin-navbar.js"></script>
+
 </body>
 </html>

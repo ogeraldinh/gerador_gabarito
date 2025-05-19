@@ -33,19 +33,21 @@ include('function_cad_ass.php');
 </head>
 
 <body>
-    <nav class="navbar"></nav>
     <main class="main-content">
 
-        <section>
-            <h1 class="title">Cadastro</h1>
-            <p>Infome seus dados para realizar o cadastro no sistema.</p>
+        <section class="main-section-1">
+            <div class="section-title">
+                <h1>Cadastro</h1>
+            </div>
+            <p>Infome os dados para realizar o cadastro do assunto no sistema.</p>
         </section>
 
-        <section>
+        <section class="main-section-2">
             <?php if (!empty($message)): ?>
                 <p><?php echo $message; ?></p>
             <?php endif; ?>
             <form action="" method="POST" class="form-login">
+                <img src="../assets/img/v-logo.png" alt="">
                 <label for="nome">Nome do assunto</label>
                 <input type="text" id="nome" name="nome" required>
 
@@ -60,16 +62,15 @@ include('function_cad_ass.php');
                 </select>
                 <button type="submit">Cadastrar</button>
 
-            </form><br>
-            <a href="assunto_prof.php"><button>voltar</button></a>
+            </form>
         </section>
-
-
     </main>
+    <div class="navigation-options">
+        <a href="assunto_prof.php">voltar</a>
+    </div>
 
 
 
-    <footer class="footer"></footer>
     <script src="../assets/js/navbar.js"></script>
     <script src="../assets/js/footer.js"></script>
 </body>

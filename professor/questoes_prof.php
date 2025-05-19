@@ -9,10 +9,18 @@ $conn = getConexao();
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/flat-navbar.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/tabela-questoes.css" />
   <title>Consultar Questões</title>
 </head>
 <body>
+  <nav class="navbar"></nav>
   <h1>Consultar Questões</h1>
 
   <!-- Form de filtros -->
@@ -37,7 +45,7 @@ $conn = getConexao();
     </fieldset>
     <button type="submit">Buscar</button>
   </form>
-  <a href="cadastro_questoes.php">Cadastrar Questão</a>
+
 
   <?php
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -67,7 +75,7 @@ $conn = getConexao();
           echo "<h2>Questões Encontradas:</h2>";
 
           // Form único para seleção e envio das questões
-          echo "<form method='POST' action='cadastro_prova.php'>";
+          echo "<form method='POST' action='cadastro_prova.php' class='tabela-questoes'>";
           echo "<table border='1' cellpadding='5'>";
           echo "<tr><th>Selecionar</th><th>Enunciado</th><th>Ações</th></tr>";
 
@@ -93,5 +101,12 @@ $conn = getConexao();
       }
   }
   ?>
+
+    <div class="navigation-options">
+    <a href="professor.php">Voltar</a>
+    <a href="cadastro_questoes.php">Cadastrar Questão</a>
+  </div>
+
+  <script src="../assets/js/prof-navbar.js"></script>
 </body>
 </html>

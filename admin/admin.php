@@ -23,23 +23,36 @@ verificarAdmin();
         rel="stylesheet">
 
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet" href="../assets/css/navbar.css" />
-    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/flat-navbar.css" />
+    <link rel="stylesheet" href="../assets/css/painel.css">
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <title>Painel do Administrador</title>
 </head>
 <body>
+    <nav class="navbar"></nav>
+
     <main class="main-content">
         <section class="main-section-1">
         <h1>Bem-vindo ao Painel do Administrador, <?php echo htmlspecialchars($_SESSION['nome']); ?>!</h1>
         <p>Aqui você pode gerenciar usuários, disciplinas, etc.</p>
-        <div class="admin-options">
-            <a href="../function_sair.php">Sair</a>
-            <a href="professor_admin.php">Gerenciar Professor</a>
-            <a href="disciplinas_admin.php">Gerenciar Disciplina</a>
-            <a href="../index.php">Ver como usuario</a>
+        
+        <div class="painel-options">
+            <a href="professor_admin.php">
+                <img src="../assets/img/hat-icon.png" alt="">
+                Gerenciar Professor</a>
+            <a href="disciplinas_admin.php">
+                <img src="../assets/img/book-icon.png" alt="">
+                Gerenciar Disciplina</a>
+
         </div>
         </section>
     </main>
+        <div class="navigation-options">
+            <a href="../function_sair.php">Sair</a>
+            <a href="../index.php">Ver como usuario</a>
+        </div>
+
+
+    <script src="../assets/js/admin-navbar.js"></script>
 </body>
 </html>
