@@ -24,7 +24,7 @@ verificarAdmin();
 
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="../assets/css/flat-navbar.css" />
-    <link rel="stylesheet" href="../assets/css/painel.css">
+    <link rel="stylesheet" href="../assets/css/panel.css">
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <title>Painel do Administrador</title>
 </head>
@@ -36,13 +36,17 @@ verificarAdmin();
         <h1>Bem-vindo ao Painel do Administrador, <?php echo htmlspecialchars($_SESSION['nome']); ?>!</h1>
         <p>Aqui você pode gerenciar usuários, disciplinas, etc.</p>
         
-        <div class="painel-options">
-            <a href="professor_admin.php">
-                <img src="../assets/img/hat-icon.png" alt="">
-                Gerenciar Professor</a>
-            <a href="disciplinas_admin.php">
-                <img src="../assets/img/book-icon.png" alt="">
-                Gerenciar Disciplina</a>
+        <div class="panel-options">
+            <div>
+                <a href="professor_admin.php">
+                    <img src="../assets/img/hat-icon.png" alt="">
+                    Gerenciar Professor</a>
+            </div>
+            <div>
+                <a href="disciplinas_admin.php">
+                    <img src="../assets/img/book-icon.png" alt="">
+                    Gerenciar Disciplina</a>
+            </div>
 
         </div>
         </section>

@@ -37,8 +37,8 @@ verificarProfessor();
             <button type="submit" class="btn-buscar">Buscar</button>
         </form>
         
-        <div class="table-responsive">
-            <table class="tabela-dados">
+        <div class="table">
+            <table class="table-date">
                 <thead>
                     <tr>
                         <th>Assunto</th>
@@ -53,7 +53,7 @@ verificarProfessor();
                                
                                 <td><?= htmlspecialchars($assunto['nome']) ?></td>
                                 <td><?= htmlspecialchars($assunto['disciplinas_nome']) ?></td>
-                                <td class="tabela-acoes">
+                                <td class="table-actions">
                                     <a href="atualizar_assunto.php?id=<?= $assunto['id'] ?>" class="btn-editar">Editar</a>
                                     <a href="excluir_assunto.php?id=<?= $assunto['id'] ?>" class="btn-excluir" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
                                 </td>

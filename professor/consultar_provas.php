@@ -27,14 +27,15 @@ $conn = getConexao();
     <nav class="navbar"></nav>
     <main class="main-content">
         <section class="main-section-1">
-                <h1>Consultar Provas</h1>
+            <h1>Consultar Provas</h1>
+            <form method="POST" action="consultar_provas.php" class="tabela">
+                <button type="submit" name="buscar_provas">Buscar Provas</button>
+            </form>
         </section>
     </main>
 
 
-    <form method="POST" action="consultar_provas.php" class="tabela">
-        <button type="submit" name="buscar_provas">Buscar Provas</button>
-    </form>
+
 
 <?php
 if (isset($_POST['buscar_provas'])) {
@@ -45,16 +46,20 @@ if (isset($_POST['buscar_provas'])) {
 
     if ($stmt->rowCount() > 0) {
         echo "<h2>Provas Cadastradas:</h2>";
-        echo "<table border='1'>";
-        echo "<tr><th>Nome</th><th>Data de Criação</th><th>Ações</th></tr>";
+        echo "<table class='table'>";
+        echo "<tr class='table-date'>
+                <th>Nome</th>
+                <th>Data de Criação</th>
+                <th>Ações</th>
+            </tr>";
 
         while ($prova = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            echo "<tr>";
+            echo "<tr class='table-date'>";
             echo "<td>" . htmlspecialchars($prova['nome']) . "</td>";
             echo "<td>" . htmlspecialchars($prova['data_criacao']) . "</td>";
-            echo "<td>";
-            echo "<a href='editar_prova.php?id={$prova['id']}'>Editar</a> | ";
-            echo "<a href='excluir_prova.php?id={$prova['id']}' class='btn-excluir' onclick='return confirm(\"Tem certeza que deseja excluir?\")'>Excluir</a> | ";
+            echo "<td class='table-actions'>";
+            echo "<a href='editar_prova.php?id={$prova['id']}'>Editar</a>";
+            echo "<a href='excluir_prova.php?id={$prova['id']}' class='btn-excluir' onclick='return confirm(\"Tem certeza que deseja excluir?\")'>Excluir</a>";
             echo "<a href='gerar_prova.php?id={$prova['id']}'>Gerar PDF</a>";
             echo "</td>";
             echo "</tr>";
