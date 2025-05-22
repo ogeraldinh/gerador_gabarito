@@ -125,3 +125,7 @@
 .navigation-options a:hover {
     background-color: #0c6493;
 }
+
+#alternativas h3, div p{
+    color: #fff;
+}

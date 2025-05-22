@@ -57,24 +57,24 @@ include('cad_quest.php');
                     ?>
                 </select>
                 <label for="texto">Enunciado da Questão:</label>
-                <textarea name="texto" id="texto" required></textarea>
-                <h3>Alternativas:</h3>
+                <textarea name="texto" id="texto" required style="width: 340px; height: 100px; resize: none; border-radius: 10px; padding: 10px;"></textarea>
                 <div id="alternativas">
+                    <h3>Alternativas:</h3>
                     <div>
                         <input type="text" name="alternativas[]" placeholder="Alternativa 1" required>
-                        <input type="radio" name="correta" value="0" required> Correta
+                        <input type="radio" name="correta" value="0" required> <p>Correta</p>
                     </div>
                     <div>
                         <input type="text" name="alternativas[]" placeholder="Alternativa 2" required>
-                        <input type="radio" name="correta" value="1"> Correta
+                        <input type="radio" name="correta" value="1"> <p>Correta</p>
                     </div>
                     <div>
                         <input type="text" name="alternativas[]" placeholder="Alternativa 3" required>
-                        <input type="radio" name="correta" value="2"> Correta
+                        <input type="radio" name="correta" value="2"> <p>Correta</p>
                     </div>
                     <div>
                         <input type="text" name="alternativas[]" placeholder="Alternativa 4" required>
-                        <input type="radio" name="correta" value="3"> Correta
+                        <input type="radio" name="correta" value="3"> <p>Correta</p>
                     </div>
                 </div>
                 <input type="hidden" name="id" value="<?php echo $_SESSION['id']; ?>">

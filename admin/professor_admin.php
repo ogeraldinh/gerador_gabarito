@@ -62,8 +62,8 @@ $result = $stmt;
             <button type="submit" class="btn-buscar">Buscar</button>
         </form>
         
-        <div class="table-responsive">
-            <table class="tabela-dados">
+        <div class="table">
+            <table class="table-date">
                 <thead>
                     <tr>
                         <th>Nome</th>
@@ -81,9 +81,9 @@ $result = $stmt;
                                 <td><?= htmlspecialchars($user_data['nome']) ?></td>
                                 <td><?= htmlspecialchars($user_data['email']) ?></td>
                                 <td><?= htmlspecialchars($user_data['disciplinas_nome']) ?></td>
-                                <td class="tabela-acoes">
-                                    <a href="atualizar_prof.php?id=<?= $user_data['id'] ?>" class="btn-editar">Editar</a>
-                                    <a href="excluir_professor.php?id=<?= $user_data['id'] ?>" class="btn-excluir" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                                <td class="table-actions">
+                                    <a href="atualizar_prof.php?id=<?= $user_data['id'] ?>" class="btn-edit">Editar</a>
+                                    <a href="excluir_professor.php?id=<?= $user_data['id'] ?>" class="btn-delete" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
                                 </td>
                             </tr>
                         <?php endwhile; ?>
